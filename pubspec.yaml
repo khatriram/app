@@ -1,0 +1,36 @@
+name: pet_battle_royale
+description: A real-time multiplayer pet battle game built with Flutter and Flame.
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 🔥 Core Game Engine
+  flame: ^1.16.0
+  flame_audio: ^2.1.4  # ✅ Latest compatible audio for Flame 1.16
+
+  # 🔥 Firebase Integration
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.16.0
+  cloud_firestore: ^4.16.0
+
+  # 🎨 UI and Effects
+  lottie: ^2.7.0
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/pets/
+    - assets/lottie/
+    - assets/sfx/
