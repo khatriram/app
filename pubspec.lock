@@ -241,6 +241,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.6"
+  flame_lottie:
+    dependency: "direct main"
+    description:
+      name: flame_lottie
+      sha256: "9d5447b7cb6ef68830876b8cc14e0ef089544e54eb4c834c87ed5dd30d13de52"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.0+1"
   flutter:
     dependency: "direct main"
     description: flutter

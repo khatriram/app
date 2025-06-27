@@ -1,15 +1,13 @@
 import 'package:flame/game.dart';
-import 'package:flame/components.dart';
 import 'package:flame/input.dart';
 import 'player_pet.dart';
 import 'enemy.dart';
-import 'fireball.dart';
 import 'components/joystick.dart';
 import 'services/firebase_service.dart';
-import 'package:flutter/material.dart';
+import 'package:flame/events.dart';
 
 class PetBattleGame extends FlameGame
-    with HasKeyboardHandlerComponents, HasTappables, HasDraggables {
+    with HasKeyboardHandlerComponents {
   late PlayerPet player;
   late Joystick joystick;
   final FirebaseService firebaseService = FirebaseService();
@@ -48,4 +46,10 @@ class PetBattleGame extends FlameGame
       overlays.add('skills');
     }
   }
+}
+
+class HasDraggables {
+}
+
+class HasTappables {
 }

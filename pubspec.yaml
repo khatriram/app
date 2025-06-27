@@ -10,6 +10,9 @@ dependencies:
     sdk: flutter
 
   # 🔥 Core Game Engine
+  dependencies:
+  audioplayers: 4.1.0
+
   flame: ^1.16.0
   flame_audio: ^2.1.4  # ✅ Latest compatible audio for Flame 1.16
 
@@ -21,6 +24,7 @@ dependencies:
   # 🎨 UI and Effects
   lottie: ^2.7.0
   shared_preferences: ^2.2.2
+  flame_lottie: ^0.4.0+1
 
 dev_dependencies:
   flutter_test:

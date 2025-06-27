@@ -1,6 +1,6 @@
 import 'package:flame/components.dart';
 
-class Fireball extends SpriteComponent with HasGameRef {
+class Fireball extends SpriteComponent with HasGameReference {
   Vector2 velocity = Vector2(350, 0);
 
   Fireball(Vector2 startPosition)
