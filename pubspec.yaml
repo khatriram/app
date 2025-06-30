@@ -10,26 +10,24 @@ dependencies:
     sdk: flutter
 
   # 🔥 Core Game Engine
-  dependencies:
-  audioplayers: 4.1.0
-
+  audioplayers: ^6.5.0
   flame: ^1.16.0
-  flame_audio: ^2.1.4  # ✅ Latest compatible audio for Flame 1.16
+  flame_audio: ^2.11.6  # ✅ Latest compatible audio for Flame 1.16
 
   # 🔥 Firebase Integration
-  firebase_core: ^2.27.0
-  firebase_auth: ^4.16.0
-  cloud_firestore: ^4.16.0
+  firebase_core: ^3.14.0
+  firebase_auth: ^5.6.0
+  cloud_firestore: ^5.6.9
 
   # 🎨 UI and Effects
-  lottie: ^2.7.0
+  lottie: ^3.3.1
   shared_preferences: ^2.2.2
   flame_lottie: ^0.4.0+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
@@ -37,4 +35,3 @@ flutter:
   assets:
     - assets/pets/
     - assets/lottie/
-    - assets/sfx/

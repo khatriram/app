@@ -1,17 +1,19 @@
 import 'package:flame/components.dart';
-
-class Fireball extends SpriteComponent with HasGameReference {
-  Vector2 velocity = Vector2(350, 0);
+import 'pet_battle_game.dart'; // Update this path if your file is in a different location
+class Fireball extends SpriteComponent with HasGameReference<PetBattleGame> {
+  final Vector2 velocity = Vector2(350, 0);
 
   Fireball(Vector2 startPosition)
       : super(
-          size: Vector2.all(48),
-          position: startPosition,
-        );
+    size: Vector2.all(48),
+    position: startPosition,
+    anchor: Anchor.center,
+  );
 
   @override
   Future<void> onLoad() async {
-    sprite = await gameRef.loadSprite('pets/fireball.png');
+    await super.onLoad();
+    sprite = await game.loadSprite('pets/fireball.png');
   }
 
   @override
@@ -19,7 +21,7 @@ class Fireball extends SpriteComponent with HasGameReference {
     super.update(dt);
     position += velocity * dt;
 
-    if (position.x > gameRef.size.x) {
+    if (position.x - size.x / 2 > game.size.x) {
       removeFromParent();
     }
   }

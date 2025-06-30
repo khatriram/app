@@ -1,7 +1,8 @@
 import 'package:flame/components.dart';
 import 'components/health_bar.dart';
-import 'player_pet.dart';
+import 'player_pet.dart'; // Make sure this file defines the PlayerPet class
 
+// ignore: deprecated_member_use
 class Enemy extends SpriteComponent with HasGameRef {
   Vector2 velocity = Vector2.zero();
   double speed = 90;
@@ -15,7 +16,11 @@ class Enemy extends SpriteComponent with HasGameRef {
   Future<void> onLoad() async {
     sprite = await gameRef.loadSprite('pets/enemy.png');
     position = Vector2(300, 300);
-    healthBar = HealthBar(maxHealth: maxHealth, currentHealth: currentHealth, position: Vector2(0, -10));
+    healthBar = HealthBar(
+      maxHealth: maxHealth,
+      currentHealth: currentHealth,
+      position: Vector2(0, -10),
+    );
     add(healthBar);
   }
 

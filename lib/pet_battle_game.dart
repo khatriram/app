@@ -48,8 +48,3 @@ class PetBattleGame extends FlameGame
   }
 }
 
-class HasDraggables {
-}
-
-class HasTappables {
-}

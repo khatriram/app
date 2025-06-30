@@ -5,7 +5,7 @@ import 'pet_battle_game.dart';
 import 'overlays/skill_buttons.dart';
 import 'overlays/lobby.dart';
 import 'overlays/leaderboard.dart';
-import 'package:flame/game.dart'; // Add this if using Flame's GameWidget, or update to your correct import
+import 'package:flame/game.dart'; // For GameWidget
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,13 +23,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pet Battle Royale',
       debugShowCheckedModeBanner: false,
-      home: GameWidget(
+      home: GameWidget<PetBattleGame>(
         game: PetBattleGame(),
         overlayBuilderMap: {
           'skills': (context, game) => SkillButtons(
-                onSkillTap: (skill) => (game as PetBattleGame).activateSkill(skill),
-              ),
-          'lobby': (context, game) => LobbyOverlay(game as PetBattleGame),
+            onSkillTap: (skill) => game.activateSkill(skill),
+          ),
+          'lobby': (context, game) => LobbyOverlay(game),
           'leaderboard': (context, game) => const LeaderboardOverlay(),
         },
         initialActiveOverlays: const ['lobby'],
